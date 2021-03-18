@@ -22,7 +22,7 @@ while($row=$stmt->fetch()){
 if(isset($_POST['btn'])){
     $oid=$_POST['oid'];
     $sql="SELECT versenyzo.nev as neve, eredmeny.ev  as evszam 
-    FROM versenyzo,eredmeny WHERE versenyzo.az=eredmeny.versenyzoaz and eredmeny.orszag='{$oid}'"; 
+    FROM versenyzo,eredmeny WHERE versenyzo.az=eredmeny.versenyzoaz and eredmeny.orszag='{$oid}' order by evszam"; 
 $stmt=$db->query($sql);
 
 
